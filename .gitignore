@@ -5,7 +5,6 @@
 
 # next.js
 /.next/
-/public
 
 # misc
 .DS_Store
