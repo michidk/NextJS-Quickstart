@@ -1,0 +1,12 @@
+---
+description: This rule provides additional instructions for Next.js development, covering various aspects such as TypeScript, SEO, image optimization, styling, and error handling.
+globs: *.tsx,*.ts,*.js,*.jsx
+alwaysApply: false
+---
+- Use TypeScript for type safety
+- Utilize Next.js Image component for optimized images
+- Use shadcn/ui for components if there is a matching component in the shadcn/ui library
+- Use Tailwind CSS for styling
+- Implement proper error boundaries
+- Follow Next.js naming conventions for special files
+- Use environment variables or config.ts for configuration

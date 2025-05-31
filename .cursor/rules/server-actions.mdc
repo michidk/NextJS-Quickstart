@@ -1,0 +1,9 @@
+---
+description:
+globs: *.tsx,*.ts,*.js,*.jsx
+alwaysApply: false
+---
+Instead of implementing API routes, prefere using react server actions.
+Implement them in a actions.ts file in the same folder where the code is that calls this function.
+Make sure to validate the input to the function using zod etc.
+The call to the server action could be made, just by calling it but using react query or similar would be better.

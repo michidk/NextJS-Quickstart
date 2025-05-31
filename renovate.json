@@ -1,0 +1,22 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:recommended",
+		":enableVulnerabilityAlertsWithLabel('security')"
+	],
+	"labels": ["no-stale", "bot"],
+	"hostRules": [
+		{
+			"matchHost": "npm.pkg.github.com",
+			"enabled": false
+		}
+	],
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch"],
+			"groupName": "all non-major dependencies",
+			"groupSlug": "all-minor-patch",
+			"matchPackageNames": ["*"]
+		}
+	]
+}

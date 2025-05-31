@@ -1,0 +1,34 @@
+{
+	"name": "NextJS, Bun, Typos",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"features": {
+		"ghcr.io/audacioustux/devcontainers/bun:1": {},
+		"ghcr.io/michidk/devcontainers-features/typos:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"loiane.ts-extension-pack",
+				"oven.bun-vscode",
+				"kricsleo.vscode-package-json-inspector",
+				"biomejs.biome",
+				"tekumara.typos-vscode",
+				"github.vscode-github-actions",
+				"YoavBls.pretty-ts-errors"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile": "zsh",
+				"search.exclude": {
+					"**/node_modules": true,
+					"**/.next": true,
+					"**/.vercel": true,
+					"**/.cursor": true
+				},
+				"files.exclude": {
+					"**/.next-env.d.ts": true
+				}
+			}
+		}
+	},
+	"postStartCommand": "bun install"
+}

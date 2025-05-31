@@ -1,0 +1,6 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+Use bun instead of npm and bunx instead of npx

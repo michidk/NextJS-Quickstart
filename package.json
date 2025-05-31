@@ -1,0 +1,43 @@
+{
+	"name": "nextjs-quickstart",
+	"description": "A simple Next.js bootstrap project.",
+	"version": "0.0.1",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbo",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint && biome lint --unsafe",
+		"lint:fix": "next lint --fix && biome lint --write --unsafe",
+		"fmt": "biome format --write"
+	},
+	"dependencies": {
+		"@radix-ui/react-slot": "^1.2.3",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.511.0",
+		"next": "15.3.3",
+		"next-auth": "5.0.0-beta.25",
+		"next-themes": "^0.3.0",
+		"react": "19.0.0-rc-45804af1-20241021",
+		"react-dom": "19.0.0-rc-45804af1-20241021",
+		"tailwind-merge": "^2.5.2",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.15.29",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"autoprefixer": "^10",
+		"dotenv": "^16.5.0",
+		"eslint": "^9.28.0",
+		"eslint-config-next": "^15.3.3",
+		"eslint-plugin-tailwindcss": "^3.18.0",
+		"postcss": "^8",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.8.3"
+	},
+	"packageManager": "bun@1.2.15"
+}

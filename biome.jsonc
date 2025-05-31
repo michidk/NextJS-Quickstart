@@ -1,0 +1,96 @@
+// Heavily inspired by https://github.com/vercel/ai-chatbot/blob/main/biome.jsonc
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"files": {
+		"ignore": [
+			"node_modules/**",
+			".git/**",
+			".next/**",
+			"public",
+			".vercel",
+			"src/components/shadcn/**"
+		]
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"useIgnoreFile": true
+	},
+	"formatter": {
+		"formatWithErrors": true
+	},
+	"linter": {
+		"rules": {
+			"a11y": {
+				"useHtmlLang": "warn", // Not in recommended ruleset, turning on manually
+				"noHeaderScope": "warn", // Not in recommended ruleset, turning on manually
+				"useValidAriaRole": {
+					"level": "warn",
+					"options": {
+						"ignoreNonDom": false,
+						"allowInvalidRoles": ["none", "text"]
+					}
+				},
+				"noSvgWithoutTitle": "off", // We do not intend to adhere to this rule
+				"useMediaCaption": "off", // We would need a cultural change to turn this on
+				"useFocusableInteractive": "off", // Disable focusable interactive element requirement
+				"useAriaPropsForRole": "off", // Disable required ARIA attributes check
+				"useKeyWithClickEvents": "off" // Disable keyboard event requirement with click events
+			},
+			"complexity": {
+				"useLiteralKeys": "off", // Sometimes used in escape hatches or to communicate intent
+				"noUselessStringConcat": "warn", // Not in recommended ruleset, turning on manually
+				"noForEach": "off", // forEach is too familiar to ban
+				"noUselessSwitchCase": "off" // Turned off due to developer preferences
+			},
+			"correctness": {
+				"noUnusedImports": "warn", // Not in recommended ruleset, turning on manually
+				"useArrayLiterals": "warn", // Not in recommended ruleset, turning on manually
+				"noNewSymbol": "warn", // Not in recommended ruleset, turning on manually
+				"useExhaustiveDependencies": "off", // Community feedback on this rule has been poor, we will continue with ESLint
+				"noUnnecessaryContinue": "off" // Turned off due to developer preferences
+			},
+			"style": {
+				"useFragmentSyntax": "warn", // Not in recommended ruleset, turning on manually
+				"noYodaExpression": "warn", // Not in recommended ruleset, turning on manually
+				"useDefaultParameterLast": "warn", // Not in recommended ruleset, turning on manually
+				"useExponentiationOperator": "off", // Obscure and arguably not easily readable
+				"noUnusedTemplateLiteral": "warn", // Spent to much time changing this back and forth
+				"noUselessElse": "off" // Stylistic opinion
+			},
+			"nursery": {
+				"noStaticElementInteractions": "warn",
+				"noHeadImportInDocument": "warn",
+				"noDocumentImportInPage": "warn",
+				"noDuplicateElseIf": "warn",
+				"noIrregularWhitespace": "warn",
+				"useValidAutocomplete": "warn"
+			}
+		}
+	},
+	"javascript": {
+		"jsxRuntime": "reactClassic",
+		"formatter": {
+			"quoteProperties": "preserve" // Can be used to communicate intent
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"trailingCommas": "none"
+		},
+		"parser": {
+			"allowComments": true,
+			"allowTrailingCommas": false
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": false
+		},
+		"linter": {
+			"enabled": false
+		}
+	}
+}
