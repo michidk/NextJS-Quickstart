@@ -1,3 +1,5 @@
+import { Button } from "@/components/shadcn/button";
+
 export default function Page() {
-	return <div>Hello World</div>;
+	return <Button>Hello World</Button>;
 }

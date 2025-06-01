@@ -40,11 +40,21 @@ export default async function RootLayout({
 					fontSans.variable,
 				)}
 			>
-				<Providers>{children}</Providers>
+				<Providers>
+					<RootLayoutStyled>{children}</RootLayoutStyled>
+				</Providers>
 
 				{/* Utils */}
 				<TailwindIndicator />
 			</body>
 		</html>
+	);
+}
+
+function RootLayoutStyled({ children }: { children: React.ReactNode }) {
+	return (
+		<div className="flex min-h-svh w-full p-6 md:p-10">
+			<div className="w-full max-w-sm">{children}</div>
+		</div>
 	);
 }
