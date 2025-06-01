@@ -125,3 +125,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* https://github.com/shadcn-ui/ui/issues/6843 */
+@layer base {
+  button, [role="button"] {
+    cursor: pointer;
+  }
+}
