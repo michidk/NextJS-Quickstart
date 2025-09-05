@@ -1,6 +1,6 @@
 {
 	"name": "NextJS, Bun, Typos",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:3-22-bookworm",
 	"features": {
 		"ghcr.io/audacioustux/devcontainers/bun:1": {},
 		"ghcr.io/michidk/devcontainers-features/typos:1": {}
