@@ -1,14 +1,15 @@
 // Heavily inspired by https://github.com/vercel/ai-chatbot/blob/main/biome.jsonc
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
 	"files": {
-		"ignore": [
-			"node_modules/**",
-			".git/**",
-			".next/**",
-			"public",
-			".vercel",
-			"src/components/shadcn/**"
+		"includes": [
+			"**",
+			"!**/node_modules/**",
+			"!**/.git/**",
+			"!**/.next/**",
+			"!**/public",
+			"!**/.vercel",
+			"!**/src/components/shadcn/**"
 		]
 	},
 	"vcs": {
@@ -36,20 +37,21 @@
 				"useMediaCaption": "off", // We would need a cultural change to turn this on
 				"useFocusableInteractive": "off", // Disable focusable interactive element requirement
 				"useAriaPropsForRole": "off", // Disable required ARIA attributes check
-				"useKeyWithClickEvents": "off" // Disable keyboard event requirement with click events
+				"useKeyWithClickEvents": "off", // Disable keyboard event requirement with click events
+				"noStaticElementInteractions": "warn",
+				"useValidAutocomplete": "warn"
 			},
 			"complexity": {
 				"useLiteralKeys": "off", // Sometimes used in escape hatches or to communicate intent
 				"noUselessStringConcat": "warn", // Not in recommended ruleset, turning on manually
 				"noForEach": "off", // forEach is too familiar to ban
-				"noUselessSwitchCase": "off" // Turned off due to developer preferences
+				"noUselessSwitchCase": "off", // Turned off due to developer preferences
+				"noUselessContinue": "off"
 			},
 			"correctness": {
 				"noUnusedImports": "warn", // Not in recommended ruleset, turning on manually
-				"useArrayLiterals": "warn", // Not in recommended ruleset, turning on manually
-				"noNewSymbol": "warn", // Not in recommended ruleset, turning on manually
 				"useExhaustiveDependencies": "off", // Community feedback on this rule has been poor, we will continue with ESLint
-				"noUnnecessaryContinue": "off" // Turned off due to developer preferences
+				"noInvalidBuiltinInstantiation": "warn"
 			},
 			"style": {
 				"useFragmentSyntax": "warn", // Not in recommended ruleset, turning on manually
@@ -57,15 +59,14 @@
 				"useDefaultParameterLast": "warn", // Not in recommended ruleset, turning on manually
 				"useExponentiationOperator": "off", // Obscure and arguably not easily readable
 				"noUnusedTemplateLiteral": "warn", // Spent to much time changing this back and forth
-				"noUselessElse": "off" // Stylistic opinion
+				"noUselessElse": "off", // Stylistic opinion
+				"useArrayLiterals": "warn"
 			},
-			"nursery": {
-				"noStaticElementInteractions": "warn",
+			"suspicious": {
 				"noHeadImportInDocument": "warn",
 				"noDocumentImportInPage": "warn",
 				"noDuplicateElseIf": "warn",
-				"noIrregularWhitespace": "warn",
-				"useValidAutocomplete": "warn"
+				"noIrregularWhitespace": "warn"
 			}
 		}
 	},

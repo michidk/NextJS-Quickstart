@@ -1,10 +1,4 @@
-const { version } = require("./package.json");
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-	publicRuntimeConfig: {
-		version,
-	},
-};
+const nextConfig = {};
 
 module.exports = nextConfig;
