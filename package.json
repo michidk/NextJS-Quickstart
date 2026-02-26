@@ -8,8 +8,8 @@
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint && biome lint --unsafe",
-		"lint:fix": "next lint --fix && biome lint --write --unsafe",
+		"lint": "eslint . && biome lint --unsafe",
+		"lint:fix": "eslint . --fix && biome lint --write --unsafe",
 		"fmt": "biome format --write"
 	},
 	"dependencies": {

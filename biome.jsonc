@@ -4,12 +4,12 @@
 	"files": {
 		"includes": [
 			"**",
-			"!**/node_modules/**",
-			"!**/.git/**",
-			"!**/.next/**",
+			"!**/node_modules",
+			"!**/.git",
+			"!**/.next",
 			"!**/public",
 			"!**/.vercel",
-			"!**/src/components/shadcn/**"
+			"!**/src/components/shadcn"
 		]
 	},
 	"vcs": {
