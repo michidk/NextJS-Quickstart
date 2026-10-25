@@ -1,19 +1,11 @@
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-import { FlatCompat } from "@eslint/eslintrc";
+import nextConfig from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-});
-
-export default [
-	...compat.extends(
-		"next/core-web-vitals",
-		"next/typescript"
-	),
+const config = [
+	...nextConfig,
+	...nextCoreWebVitals,
+	...nextTypescript,
 	{
 		settings: {
 			import: {
@@ -28,3 +20,5 @@ export default [
 		ignores: ["**/components/shadcn/**"],
 	},
 ];
+
+export default config;
